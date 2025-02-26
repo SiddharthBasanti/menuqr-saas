@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QRMenu Instant - QR Menu Generator</title>
+    <script>
+      // Check if we need to show the menu
+      window.addEventListener('DOMContentLoaded', () => {
+        const menuContent = localStorage.getItem('qrmenu-content');
+        if (menuContent) {
+          document.documentElement.innerHTML = menuContent;
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
